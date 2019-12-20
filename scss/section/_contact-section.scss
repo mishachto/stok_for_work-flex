@@ -1,0 +1,14 @@
+.contact {
+  padding: 100px 0;
+  background-color: $color-white-global;
+
+  .paragraph-about {
+    h3 {
+      @include heading_styles;
+    }
+
+    p {
+      @include paragraph__style;
+    }
+  }
+}

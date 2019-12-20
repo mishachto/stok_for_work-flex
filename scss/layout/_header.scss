@@ -1,0 +1,134 @@
+header {
+  background-color: $color-bg-header;
+  border-top: solid 3px #262626;
+  position: relative;
+  z-index: 3;
+  @include max-screen(567px) {
+    border: none;
+  }
+
+  .navbar {
+    @include min-screen(992px) {
+      padding: 0;
+    }
+
+    .navbar-nav {
+      font-family: $font-first;
+      font-weight: normal;
+      text-transform: uppercase;
+      line-height: 62px;
+
+      .nav-item {
+        .nav-link {
+          color: $color-nav-link;
+          padding: 0 15px;
+          font-size: 18px;
+          @include max-screen(1140px) {
+            font-size: 16px;
+            padding: 0 12px;
+          }
+          @include max-screen(768px) {
+            padding: 0;
+          }
+
+          &::after {
+            display: block;
+            margin: auto;
+            content: '';
+            background-color: transparent;
+            height: 2px;
+          }
+
+          &::before {
+            display: block;
+            margin: auto;
+            content: '';
+            background-color: transparent;
+            height: 3px;
+          }
+
+          &:hover {
+            color: #fff;
+
+            &::before {
+              display: block;
+              margin: auto;
+              width: 27px;
+              content: '';
+              background-color: $color-first;
+              height: 3px;
+            }
+
+            &::after {
+              display: block;
+              margin: auto;
+              content: '';
+              width: 27px;
+              background-color: $color-first;
+              height: 2px;
+            }
+
+            @include max-screen(769px) {
+              &::before {
+                background-color: transparent;
+              }
+
+              &::after {
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logo-link {
+    color: transparent;
+
+    &:hover {
+      color: transparent;
+    }
+
+    .logo {
+      max-width: 249px;
+      width: 100%;
+      height: 106px;
+      background-color: $color-first;
+      clip-path: polygon(50% 0%, 100% 0, 100% 41%, 75% 100%, 26% 100%, 0 41%, 0 0);
+      position: absolute;
+      top: -3px;
+      @include max-screen(567px) {
+        background-color: transparent;
+
+      }
+
+      &:before {
+        content: 'Creativia';
+        max-width: 247px;
+        width: 100%;
+        color: $color-text-logo;
+        font-size: 23px;
+        font-family: $font-second;
+        text-align: center;
+        display: block;
+        line-height: 105px;
+        background: $color-bg-logo;
+        clip-path: polygon(50% 0%, 100% 0, 100% 41%, 75% 100%, 26% 100%, 0 41%, 0 0);
+        position: absolute;
+        left: 1px;
+        @include max-screen(567px) {
+          line-height: 59px;
+        }
+      }
+    }
+  }
+
+  .navbar-light .navbar-toggler-icon {
+    opacity: 1;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 0, 54, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+}
+
+
+

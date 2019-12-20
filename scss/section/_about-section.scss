@@ -1,0 +1,65 @@
+.about-us {
+  padding: 50px 0 100px;
+
+  h4 {
+    font-family: $font-first;
+    font-size: 20px;
+    font-weight: 500;
+    color: $color-about-heading;
+    text-transform: uppercase;
+    margin: 32px 0 22px;
+  }
+
+  .paragraph-about {
+    h3 {
+      @include heading_styles;
+      color: $color-about-heading;
+
+    }
+
+    p {
+      @include paragraph__style;
+      font-weight: bold;
+
+    }
+  }
+
+  p {
+    @include paragraph__style;
+  }
+
+
+  .separator {
+    @include separator;
+    &:after {
+      @include separator-after;
+    }
+  }
+
+  .icon-about {
+    @include icons-services;
+
+    &:before {
+      @include icons-services-before;
+    }
+
+    &:hover {
+      background-color: $color-first;
+      transition: 0.5s;
+
+      i {
+        color: #fff;
+        transition: 0.5s;
+      }
+
+      &:before {
+        background-color: $color-first;
+        transition: 0.5s;
+      }
+    }
+
+    i {
+      @include icons-services-i;
+    }
+  }
+}

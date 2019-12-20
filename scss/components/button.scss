@@ -1,0 +1,66 @@
+.button_slider {
+  display: inline-block;
+  line-height: 50px;
+  width: 100%;
+  max-width: 170px;
+  text-transform: uppercase;
+  color: $color-white-global;
+  font-size: 20px;
+  background-color: $color-button-slider;
+  transition: 0.5s;
+  margin: 0 15px 15px;
+  @include max-screen(330px) {
+    position: relative;
+    top: -40px;
+  }
+
+  &:hover {
+    background-color: $color-first;
+    transition: 0.5s;
+    color: $color-white-global;
+  }
+}
+
+.button-reseller {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 38px;
+  background-color: $color-bg-section-second;
+  margin: 0;
+  width: 100%;
+  text-transform: uppercase;
+  color: $color-white-global;
+}
+
+.button-blog {
+  display: inline-block;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 120px;
+  background-color: $color-about-heading;
+  margin: 0;
+  line-height: 40px;
+  font-size: 16px;
+  color: $color-white-global;
+
+  &:hover {
+    background-color: $color-first;
+  }
+}
+
+.button-maps {
+  display: block;
+  background-color: $color-bg-section-second;
+  max-width: 120px;
+  width: 100%;
+  line-height: 40px;
+  text-transform: uppercase;
+  font-family: $font-second;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color-white-global;
+  border: none;
+  margin-top: 9px;
+  margin-left: auto;
+}

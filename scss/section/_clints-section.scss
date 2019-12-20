@@ -1,0 +1,48 @@
+.clints {
+  padding: 100px 0;
+  background-image: url("../images/bg-section.png");
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $color-placeholder-portfolio;
+  }
+
+  .paragraph-about {
+    h3 {
+      @include heading_styles;
+      color: $color-section-text;
+    }
+
+    p {
+      @include paragraph__style;
+      font-weight: 700;
+      color: $color-section-text;
+    }
+  }
+
+  .box-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 116px;
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 0 40px 35px #8A8A8A;
+    box-shadow: inset 0 0 40px 35px #9E9E9E;
+    text-align: center;
+    margin-bottom: 39px;
+
+    span {
+      font-family: $font-third;
+      font-size: 24px;
+      color: $color-box-span;
+    }
+  }
+}

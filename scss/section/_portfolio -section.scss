@@ -1,0 +1,131 @@
+.portfolio {
+  padding: 100px 0;
+  background-color: $color-bg-section-second;
+
+  h3 {
+    @include heading_styles;
+    margin-bottom: 27px;
+    color: $color-text-logo;
+  }
+
+  .portfolio-menu {
+    font-family: $font-second;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 100px;
+    padding: 0;
+    @include max-screen(567px) {
+      display: inline-grid;
+    }
+
+    li {
+      display: inline-block;
+      padding: 0 11px;
+      @include max-screen(567px) {
+        padding: 11px 0;
+      }
+      a {
+        color: $color-nav-link;
+        transition: 0.5s;
+
+        &:hover {
+          color: $color-first;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+
+.container-portfolio {
+  @include max-screen(1400px) {
+    padding: 0 15px;
+  }
+
+  .images-portfolio {
+    overflow: hidden;
+    position: relative;
+
+    @include max-screen(1400px) {
+      width: 320px;
+      height: 320px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .placeholder-portfolio {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      transition: 0.5s;
+      background: $color-placeholder-portfolio-hover;
+
+      i {
+        color: $color-white-global;
+        font-size: 25px;
+        position: absolute;
+        left: calc(50% - 12px);
+        top: -100px;
+        transition: 0.5s;
+      }
+
+      span {
+        color: $color-white-global;
+        font-size: 16px;
+        font-family: $font-second;
+        position: absolute;
+        left: -100%;
+        top: calc(50% - -40px);
+        transition: 0.5s;
+      }
+
+    }
+
+    &:hover {
+      .placeholder-portfolio {
+        transition: 0.5s;
+        background: $color-placeholder-portfolio;
+      }
+
+      i {
+        top: calc(50% - 12px);
+        transition: 1s;
+        @include transform-portfolio;
+      }
+
+      span {
+        left: calc(50% - 40px);
+        transition: 1s;
+      }
+
+    }
+  }
+}
+
+
+.position-separator {
+  display: flex;
+  justify-content: center;
+  bottom: -2px;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.separator {
+  @include separator;
+  background-color: $color-first;
+
+  &:after {
+    @include separator-after;
+    background-color: $color-first;
+  }
+}

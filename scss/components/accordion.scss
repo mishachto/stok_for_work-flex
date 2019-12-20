@@ -1,0 +1,114 @@
+#accordion {
+
+  .card-body {
+    @include paragraph__style;
+    font-size: 14px;
+  }
+
+  .card {
+    border-radius: 0;
+    border-bottom: solid 1px #e7e7e7;
+    border-top: none;
+    border-left: solid 1px #e7e7e7;
+    border-right: solid 1px #e7e7e7;
+    margin-bottom: 9px;
+  }
+
+  .card-header {
+    line-height: 43px;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #e7e7e7;
+    border-top: solid 1px #e7e7e7;
+    border-radius: 0;
+    background-color: $color-bg-acardion;
+  }
+
+  .btn.btn-link {
+    color: $color-first;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: $font-first;
+    font-weight: 500;
+    width: 100%;
+    text-align: left;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .open-icon {
+      width: 58px;
+      line-height: 43px;
+      background: transparent;
+      border-right: solid 1px #e7e7e7;;
+      text-align: center;
+      display: inline-block;
+
+      span {
+        width: 20px;
+        height: 20px;
+        border: solid 1px $color-first;
+        border-radius: 100%;
+        display: inline-block;
+        position: relative;
+
+        &:after {
+          margin: auto;
+          content: '';
+          display: block;
+          width: 10px;
+          height: 2px;
+          background-color: $color-first;
+          position: absolute;
+          top: 8px;
+          left: 4px;
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    &.collapsed {
+      color: $color-about-heading;
+
+      .open-icon {
+        span {
+          border: solid 1px $color-about-heading;
+
+          &:after {
+            background-color: $color-about-heading;
+          }
+
+          &:before {
+            margin: auto;
+            content: '';
+            display: block;
+            width: 2px;
+            height: 10px;
+            background-color: $color-about-heading;
+            position: absolute;
+            top: 4px;
+            left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.m-separator {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  @include max-screen(767px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+

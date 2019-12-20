@@ -1,0 +1,99 @@
+.following {
+  padding: 100px 0;
+  background-image: url("../images/bg-following.png");
+  background-size: cover;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: $color-placeholder-portfolio;
+  }
+
+  .paragraph-about {
+    h3 {
+      @include heading_styles;
+      color: $color-white-global;
+    }
+  }
+
+  .social-icons-follow {
+    .social-icon-item {
+      margin: 0 25px;
+      display: inline-block;
+      @include max-screen(550px) {
+        margin-bottom: 30px;
+      }
+
+      a {
+        display: inline-block;
+        transform: rotate(90deg);
+        position: relative;
+        z-index: 1;
+        height: 38px;
+        width: 66px;
+        border: solid 1px $color-first;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 1px;
+
+        &:after, &:before {
+          content: '';
+          position: absolute;
+          left: -1px;
+          top: 0;
+          z-index: -1;
+          height: 38px;
+          border: solid 1px $color-first;
+          width: 66px;
+          border-top: none;
+          border-bottom: none;
+          border-radius: 1px;
+        }
+
+        &:after {
+          transform: rotate(60deg);
+        }
+
+        &:before {
+          transform: rotate(-60deg);
+        }
+
+        i {
+          transform: rotate(-90deg);
+          color: $color-first;
+          position: relative;
+          top: 8px;
+          font-size: 17px;
+          transition: 0.5s;
+        }
+
+        &:hover {
+          background-color: $color-first;
+
+          &:after, &:before {
+            background-color: $color-first;
+          }
+
+          i {
+            color: $color-white-global;
+            transition: 0.5s;
+          }
+        }
+      }
+
+      span {
+        display: block;
+        font-family: $font-second;
+        font-weight: 400;
+        font-size: 16px;
+        color: $color-white-global;
+        padding-top: 46px;
+      }
+    }
+  }
+}

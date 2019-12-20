@@ -1,0 +1,121 @@
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+@mixin min-screen($res) {
+  @media screen and (min-width: $res) {
+    @content;
+  }
+}
+
+@mixin heading_styles {
+  font-family: $font-first;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 40px;
+  span {
+    color: $color-first;
+  }
+}
+
+@mixin paragraph__style {
+  color: $color-paragraph;
+  font-family: $font-second;
+  font-size: 16px;
+  font-weight: bold;
+  span {
+    color: $color-first;
+  }
+}
+
+@mixin separator {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  max-width: 515px;
+  background-color: $color-about-heading;
+}
+
+@mixin separator-after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 10px);
+  top: -8px;
+  display: inline-block;
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  width: 21px;
+  height: 20px;
+  background-color: $color-about-heading;
+}
+
+@mixin transform-portfolio {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+@mixin transform-progress-bar($res) {
+  -moz-transform: rotate($res);
+  -webkit-transform: rotate($res);
+  -o-transform: rotate($res);
+  -ms-transform: rotate($res);
+  transform: rotate($res);
+}
+
+@mixin description-team {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: $font-first;
+  font-weight: 500;
+  font-size: 20px;
+  color: $color-about-heading;
+  width: 100%;
+  border: solid 1px $color-border-info-table;
+  line-height: 60px;
+}
+
+@mixin description-team-span {
+  font-family: $font-second;
+  font-size: 16px;
+  text-transform: none;
+  display: block;
+  color: $color-paragraph;
+}
+
+@mixin icons-services {
+  display: inline-block;
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  width: 90px;
+  height: 78px;
+  background-color: $color-about-heading;
+  position: relative;
+}
+
+@mixin icons-services-before {
+  position: relative;
+  top: 1px;
+  content: '';
+  display: inline-block;
+  clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+  width: 88px;
+  height: 76px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+@mixin icons-services-i {
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}

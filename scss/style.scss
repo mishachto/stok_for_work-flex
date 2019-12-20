@@ -1,0 +1,30 @@
+//utils
+@import "utils/_variables.scss";
+@import "utils/_mixins.scss";
+//layout
+@import "layout/_header.scss";
+@import "layout/footer";
+//components
+@import "components/button";
+@import "components/accordion";
+@import "components/carousel-clints";
+@import "components/progress-bar-circle";
+//section
+@import "section/about-section";
+@import "section/team-section";
+@import "section/bestseller-section";
+@import "section/twitter-s-section";
+@import "section/main-slider";
+@import "section/services-section";
+@import "section/clints-section";
+@import "section/products-section";
+@import "section/portfolio -section";
+@import "section/following-section";
+@import "section/contact-section";
+@import "section/blog-section";
+@import "section/maps-section";
+//base
+@import "base/_typography.scss";
+@import "base/_base.scss";
+
+

@@ -1,0 +1,75 @@
+.clints {
+  .carousel {
+    position: static;
+    width: 100%;
+    height: 100%;
+    @include min-screen(768px) {
+      height: 300px;
+    }
+
+    .carousel-indicators {
+      display: flex;
+      margin: 0;
+
+      li {
+        border-radius: 0;
+      }
+    }
+
+    .carousel-inner {
+      height: 100%;
+
+      .carousel-item {
+        height: 100%;
+      }
+
+      .carousel-caption {
+        height: 100%;
+        left: 0;
+        right: 0;
+
+        h5 {
+          font-family: $font-first;
+          font-weight: 500;
+          text-transform: uppercase;
+          font-size: 20px;
+          color: #fff;
+        }
+
+        p {
+          font-family: $font-second;
+          font-size: 16px;
+          color: $color-section-text;
+        }
+
+        .icon-clients {
+          clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
+          width: 66px;
+          height: 57px;
+          background-image: url("../images/icon-clients_03.png");
+          display: inline-block;
+          background-size: cover;
+          background-position: center;
+        }
+
+        .clints_2 {
+          background-image: url("../images/img-team-2.png");
+        }
+
+        .clints_3 {
+          background-image: url("../images/img-team-3.png");
+        }
+
+        .name-clients {
+          text-transform: uppercase;
+          color: $color-first;
+          font-family: $font-first;
+          font-weight: 700;
+          font-size: 16px;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+}
+

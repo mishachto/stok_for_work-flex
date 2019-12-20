@@ -1,0 +1,29 @@
+.twitter-s {
+  padding: 100px 0;
+  background-color: $color-bg-section-second;
+  position: relative;
+
+  .paragraph-about {
+    h3 {
+      @include heading_styles;
+      color: $color-first;
+      margin-bottom: 25px;
+    }
+
+    p {
+      @include paragraph__style;
+      color: $color-white-global;
+      font-weight: 400;
+    }
+  }
+
+  .separator {
+    @include separator;
+    background-color: $color-first;
+
+    &:after {
+      @include separator-after;
+      background-color: $color-first;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.bestseller {
+  padding: 100px 0;
+  background-color: $color-bg-section-first;
+
+  .paragraph-about {
+    h3 {
+      @include heading_styles;
+    }
+
+    p {
+      @include paragraph__style;
+      font-weight: 700;
+    }
+  }
+
+  .reseller {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+
+    li {
+      border: solid 1px $color-border-info-table;
+      border-top: none;
+      list-style-type: none;
+      line-height: 51px;
+      font-size: 16px;
+      font-family: $font-second;
+      font-weight: 400;
+      color: $color-about-heading;
+
+
+      &:first-child {
+        line-height: 48px;
+        border: none;
+        background-color: $color-bg-section-second;
+        color: $color-white-global;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: $font-first;
+        font-weight: 500;
+      }
+
+      &:nth-child(2) {
+        transition: 0.5s;
+        background-color: $color-border-info-table;
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 87px;
+
+        span {
+          font-size: initial;
+        }
+      }
+
+      &:last-child {
+        line-height: normal;
+        padding: 20px 17px;
+      }
+    }
+
+    &:hover {
+      li {
+        &:nth-child(2) {
+          transition: 0.5s;
+          color: $color-white-global;
+          background-color: $color-first;
+        }
+
+        .button-reseller {
+          background-color: $color-first;
+        }
+      }
+
+    }
+  }
+}

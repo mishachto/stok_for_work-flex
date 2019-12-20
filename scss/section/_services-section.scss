@@ -1,0 +1,83 @@
+.services {
+  padding: 100px 0;
+  background-color: $color-bg-section-second;
+
+  .paragraph-about {
+    h3 {
+      @include heading_styles;
+      color: $color-section-text;
+    }
+
+    p {
+      @include paragraph__style;
+      font-weight: 700;
+      color: $color-section-text;
+    }
+  }
+
+  .box-services {
+    margin-top: 57px;
+    cursor: pointer;
+
+    .h-services {
+      display: flex;
+      align-items: center;
+
+      .icon-services {
+        @include icons-services;
+        background-color: $color-section-text;
+        width: 66px;
+        height: 57px;
+
+        i {
+          @include icons-services-i;
+          font-size: 28px;
+        }
+      }
+
+      h5 {
+        color: $color-white-global;
+        display: inline;
+        text-transform: uppercase;
+        font-family: $font-first;
+        font-weight: 500;
+        margin: 0 0 0 33px;
+      }
+    }
+
+
+    .box-text-services {
+      width: 100%;
+      padding: 30px;
+      background-color: $color-bg-services-text;
+      transition: 0.5s;
+      margin-top: 30px;
+      p {
+        font-size: 16px;
+        font-family: $font-second;
+        font-weight: 400;
+        color: $color-section-text;
+        transition: 0.5s;
+      }
+
+    }
+
+    &:hover {
+      .icon-services {
+        background-color: $color-first;
+        color: $color-white-global;
+
+      }
+
+      .box-text-services {
+        background-color: $color-first-a;
+        transition: 0.5s;
+
+        p {
+          color: $color-white-global;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.maps {
+  background-image: url("../images/maps.png");
+  background-size: cover;
+  padding-top: 100px;
+  display: flex;
+
+  .contact-box {
+    display: inline-block;
+    max-width: 300px;
+    width: 100%;
+    padding: 35px 0 45px 25px;
+    background-color: $color-bg-section-second;
+    text-align: left;
+    position: relative;
+    margin-top: 50%;
+    @include max-screen(767px) {
+      margin: 0 0 100px 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 55px;
+      height: 55px;
+      background-color: $color-bg-section-second;
+      clip-path: polygon(86% 0, 30% 0, 0 100%);
+      position: absolute;
+      right: 0;
+      bottom: -54px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        color: $color-white-global;
+        list-style-type: none;
+        font-family: $font-second;
+        font-weight: 400;
+      }
+    }
+  }
+
+  form {
+    padding: 50px 48px 48px 44px;
+    background-color: $color-white-global;
+    max-width: 470px;
+
+    input, textarea {
+      border-radius: 0;
+      border: solid 1px $color-border-info-table;
+      margin-bottom: 18px;
+    }
+
+    h5 {
+      font-size: 20px;
+      font-family: $font-first;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $color-bg-section-second;
+      margin-bottom: 50px;
+    }
+  }
+}
